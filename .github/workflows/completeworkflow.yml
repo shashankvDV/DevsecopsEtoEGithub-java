@@ -4,6 +4,10 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     name: Run unit tests and SAST scan on the source code 
     steps:
     - uses: actions/checkout@v3
